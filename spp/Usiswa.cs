@@ -20,11 +20,13 @@ namespace spp
         }
         void opendata()
         {
-            string select = "select * from siswa where siswa like '%" + textBox1.Text + "%'";
-            dataGridView1.DataSource = class1.getData(select);
+            string sql = "select * from siswa where siswa LIke '%" + textBox1.Text + "%'";
+            dataGridView1.DataSource = class1.getData(sql);
         }
-
-
+        private void Usiswa_Load(object sender, EventArgs e)
+        {
+            opendata();
+        }
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
@@ -135,5 +137,12 @@ namespace spp
         {
 
         }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

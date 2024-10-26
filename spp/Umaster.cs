@@ -13,8 +13,7 @@ namespace spp
     public partial class Umaster : UserControl
     {
         Upetugas petugas = new Upetugas();
-
-        Utransaksi siswa = new Utransaksi();
+        Usiswa siswa = new Usiswa();
         public Umaster()
         {
             InitializeComponent();

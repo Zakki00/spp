@@ -16,8 +16,8 @@ namespace spp
         Uberanda beranda = new Uberanda();
         Utransaksi transaksi = new Utransaksi();
         Umaster master = new Umaster();
-
-    
+        public string idpetugas = "0";
+        
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +25,7 @@ namespace spp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            label1.Text = idpetugas;
             panel2.Controls.Clear();
             panel2.Controls.Add(beranda);
             beranda.Dock = DockStyle.Fill;
@@ -53,6 +54,11 @@ namespace spp
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
