@@ -202,6 +202,8 @@ namespace spp
         private void button4_Click_1(object sender, EventArgs e)
         {
             groupBox2.Enabled = true;
+            id = "0";
+            class1.clearForm(groupBox2);    
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -224,6 +226,11 @@ namespace spp
                 id = "0";
 
             }
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

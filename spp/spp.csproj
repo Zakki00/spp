@@ -61,6 +61,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="transaksi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="transaksi.Designer.cs">
+      <DependentUpon>transaksi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uberanda.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,12 +97,6 @@
     <Compile Include="Usiswa.Designer.cs">
       <DependentUpon>Usiswa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utransaksi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Utransaksi.Designer.cs">
-      <DependentUpon>Utransaksi.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="transaksi.resx">
+      <DependentUpon>transaksi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Uberanda.resx">
       <DependentUpon>Uberanda.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,9 +129,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usiswa.resx">
       <DependentUpon>Usiswa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Utransaksi.resx">
-      <DependentUpon>Utransaksi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

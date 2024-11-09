@@ -13,14 +13,17 @@ namespace spp
     public partial class Form1 : Form
     {
 
-        Uberanda beranda = new Uberanda();
-        Utransaksi transaksi = new Utransaksi();
+
+        public transaksi transaksi;
+
+        Uberanda beranda = new Uberanda(); 
         Umaster master = new Umaster();
         public string idpetugas = "0";
         
         public Form1()
         {
             InitializeComponent();
+            transaksi = new transaksi(this);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,5 +65,15 @@ namespace spp
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+         login login = new login();
+         login.Show();
+        this.Close();
+        }
+
+     
     }
 }
