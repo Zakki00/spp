@@ -14,24 +14,28 @@ namespace spp
     {
 
 
-        public transaksi transaksi;
-
+        transaksi transaksi = new transaksi();
         Uberanda beranda = new Uberanda(); 
         Umaster master = new Umaster();
+        Ulaporan laporan = new Ulaporan();
+        Usiswa siswa = new Usiswa();
+        Upetugas peyugas = new Upetugas();  
         public string idpetugas = "0";
-        
+        public string petugas;
         public Form1()
         {
             InitializeComponent();
-            transaksi = new transaksi(this);
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            beranda.label3.Text = petugas;
             label1.Text = idpetugas;
             panel2.Controls.Clear();
             panel2.Controls.Add(beranda);
             beranda.Dock = DockStyle.Fill;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,10 +50,13 @@ namespace spp
             panel2.Controls.Clear();
             panel2.Controls.Add(master);
             master.Dock = DockStyle.Fill;
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            siswa.opendata();
+            transaksi.idpetugas = idpetugas;
             panel2.Controls.Clear();
             panel2.Controls.Add(transaksi);
             transaksi.Dock = DockStyle.Fill;
@@ -58,7 +65,11 @@ namespace spp
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            laporan.GET();
+            panel2.Controls.Clear();
+            panel2.Controls.Add(laporan);
+            laporan.Dock = DockStyle.Fill;
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -71,7 +82,7 @@ namespace spp
 
          login login = new login();
          login.Show();
-        this.Close();
+         this.Close();
         }
 
      

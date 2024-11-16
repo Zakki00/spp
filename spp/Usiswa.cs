@@ -18,7 +18,7 @@ namespace spp
         {
             InitializeComponent();
         }
-        void opendata()
+        public void opendata()
         {
             string sql = "select * from siswa where siswa LIke '%" + textBox1.Text + "%'";
             dataGridView1.DataSource = class1.getData(sql);
@@ -159,6 +159,7 @@ namespace spp
                     class1.exc(sql);
                     class1.clearForm(groupBox2);
                     MessageBox.Show("Data Sudah Di Tambahkan");
+                    opendata();
 
                 }
                 else
@@ -167,6 +168,7 @@ namespace spp
                     class1.exc(sql);
                     class1.clearForm(groupBox2);
                     MessageBox.Show("Data Sudah Di Perbarui");
+                    opendata();
                 }
             }
             id = "0";

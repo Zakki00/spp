@@ -76,6 +76,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Uberanda";
             this.Size = new System.Drawing.Size(778, 565);
+            this.Load += new System.EventHandler(this.Uberanda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -85,6 +86,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label3;
     }
 }

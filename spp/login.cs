@@ -12,10 +12,10 @@ namespace spp
 {
     public partial class login : Form
     {
+        Uberanda beranda = new Uberanda();
         Class1 class1 = new Class1();
         public transaksi transaksi;
-        Form1 form1 = new Form1();  
-      
+        Form1 form1 = new Form1();     
         public login()
         {
             InitializeComponent();
@@ -38,11 +38,9 @@ namespace spp
                 else
                 {
                     form1.idpetugas = class1.getValue(sql, "idpetugas");
-                    transaksi.idpetugas = class1.getValue(sql, "idpetugas");
-                    transaksi.UpdateIdPetugasDisplay();
+                    form1.petugas = class1.getValue(sql, "petugas");
                     class1.exc(sql);
                     form1.ShowDialog();
-                   
                     this.Close();
 
 

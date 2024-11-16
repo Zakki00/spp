@@ -19,6 +19,7 @@ namespace spp
             InitializeComponent();
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
@@ -31,6 +32,8 @@ namespace spp
             panel1.Controls.Clear();
             panel1.Controls.Add(siswa);
             siswa.Dock = DockStyle.Fill;
+
+
         }
 
         private void Umaster_Load(object sender, EventArgs e)

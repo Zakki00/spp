@@ -13,23 +13,20 @@ namespace spp
     
     public partial class transaksi : UserControl
     {
-        public string idpetugas { get; set; }
-
+      
+        public string idpetugas = "0";
         string idsiswa = "0";
         Class1 Class1 = new Class1();
-        private Form1 form1;
-        public transaksi(Form1 form1Instance)
+        public transaksi()
         {
             InitializeComponent();
-            form1 = form1Instance;
+          
         }
         private void transaksi_Load(object sender, EventArgs e)
         {
             GET();
-            Form1 form1 = new Form1();
-
-
-            label8.Text = form1.label1.Text;
+          
+            label8.Text = idpetugas;
         }
 
         void GET()
@@ -68,7 +65,7 @@ namespace spp
             {
                 idsiswa = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 label6.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-
+                //label9.Text = dataGridView1.Rows[e.RowIndex].Cells[]
               
                
             }
@@ -84,11 +81,9 @@ namespace spp
 
         }
 
-      
-        public void UpdateIdPetugasDisplay()
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Memperbarui label8 dengan ID: " + idpetugas); // Memastikan idpetugas terisi
-            label8.Text = idpetugas;
+
         }
     }
 }

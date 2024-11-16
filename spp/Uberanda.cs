@@ -12,6 +12,7 @@ namespace spp
 {
     public partial class Uberanda : UserControl
     {
+      
         public Uberanda()
         {
             InitializeComponent();
@@ -20,6 +21,11 @@ namespace spp
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Uberanda_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }
